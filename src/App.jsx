@@ -1,12 +1,16 @@
-import { useState } from 'react'
+import { Toaster } from 'react-hot-toast'
+import { ReactRouterProvider } from './providers'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 function App() {
+  const queryClient = new QueryClient();
 
   return (
-    <div>
-      Hello World!
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <ReactRouterProvider />
+      <Toaster />
+    </QueryClientProvider>
   )
 }
 
-export default App
+export default App;
