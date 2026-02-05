@@ -1,8 +1,8 @@
 #footer-container {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 8rem;
+    height: 8.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,20 +21,18 @@
         justify-content: space-between;
         text-decoration: none;
         font-size: 2rem;
-        font-weight: 500;
+        margin: 0 1rem;
 
         #footer-links-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 2rem;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 
     #footer-bottom {
         text-align: center;
-        font-size: 1.2rem;
-        font-weight: 500;
     }
 }

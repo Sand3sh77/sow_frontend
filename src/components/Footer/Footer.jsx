@@ -6,11 +6,11 @@ export default function Footer() {
         <footer id='footer-container'>
             <div id="footer-content">
                 <div id='footer-top'>
-                    <span>123 Faktuera</span>
+                    <span>123 Fakturera</span>
                     <div id='footer-links-container'>
                         <a>Home</a>
                         <a>Order</a>
-                        <a>Contact Us</a>
+                        <a>Contact us</a>
                     </div>
                 </div>
                 <hr />
