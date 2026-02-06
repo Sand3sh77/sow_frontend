@@ -16,7 +16,7 @@ export default function Navbar() {
 
                     <div id='nav-language-container'>
                         <a className='nav-link'>English</a>
-                        <img src="https://storage.123fakturere.no/public/flags/GB.png" alt="UK Logo" height="25px" />
+                        <img src="https://storage.123fakturere.no/public/flags/GB.png" alt="UK Logo" height="20px" />
                     </div>
                 </div>
             </div>

@@ -1,15 +1,16 @@
 import { Toaster } from 'react-hot-toast'
-import { ReactRouterProvider } from './providers'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { AppRoutes } from './routes';
+import { AuthProvider, TranslationProvider } from './context';
 
 function App() {
-  const queryClient = new QueryClient();
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ReactRouterProvider />
-      <Toaster />
-    </QueryClientProvider>
+    <AuthProvider>
+      <TranslationProvider>
+        <AppRoutes />
+        <Toaster />
+      </TranslationProvider>
+    </AuthProvider>
   )
 }
 
