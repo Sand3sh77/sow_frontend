@@ -5,9 +5,10 @@ export const TranslationContext = createContext();
 
 export const TranslationProvider = ({ children }) => {
   const [translations, setTranslations] = useState({});
-  const [language, setLanguage] = useState("english");
+  const [language, setLanguage] = useState(localStorage.getItem("language") || "english");
 
   useEffect(() => {
+    localStorage.setItem("language", language);
     fetchTranslations(language);
   }, [language]);
 
