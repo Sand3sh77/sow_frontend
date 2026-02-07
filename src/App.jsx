@@ -1,16 +1,18 @@
 import { Toaster } from 'react-hot-toast'
 import { AppRoutes } from './routes';
-import { AuthProvider, TranslationProvider } from './context';
+import { AuthProvider, ConfigProvider, TranslationProvider } from './context';
 
 function App() {
 
   return (
-    <AuthProvider>
-      <TranslationProvider>
-        <AppRoutes />
-        <Toaster />
-      </TranslationProvider>
-    </AuthProvider>
+    <TranslationProvider>
+      <ConfigProvider>
+        <AuthProvider>
+          <AppRoutes />
+          <Toaster />
+        </AuthProvider>
+      </ConfigProvider>
+    </TranslationProvider>
   )
 }
 
