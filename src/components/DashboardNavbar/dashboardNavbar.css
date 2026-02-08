@@ -1,0 +1,43 @@
+#dashboard-navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f7ee9;
+    height: 6rem;
+
+    #dashboard-navbar-content {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+
+        #dashboard-navbar-user {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+
+            #dashboard-navbar-user-avatar {
+                border-radius: 100rem;
+                width: 4rem;
+                height: 4rem;
+            }
+
+            #dashboard-navbar-user-info {
+                display: flex;
+                flex-direction: column;
+                color: white;
+                font-weight: 600;
+
+                span:first-child {
+                    font-size: 1rem;
+                }
+
+                span:last-child {
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

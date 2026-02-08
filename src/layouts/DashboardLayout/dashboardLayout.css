@@ -1,6 +1,9 @@
 #dashboard-layout-container {
-    min-height: 100vh;
-    background-image: url(https://storage.123fakturera.se/public/wallpapers/sverige43.jpg);
-    background-size: cover;
-    overflow-x: hidden;
+    height: 100vh;
+
+    #dashboard-layout {
+        display: flex;
+    }
+
+    #dashboard-layout-content {}
 }
