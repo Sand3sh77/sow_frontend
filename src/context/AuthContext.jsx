@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
                 setUser(data.user);
                 localStorage.setItem("user", JSON.stringify(data.user));
                 localStorage.setItem("token", data.token);
-                navigate("/");
+                navigate("/priceList");
             }
         } catch (error) {
             console.log(error);
@@ -30,6 +30,8 @@ export const AuthProvider = ({ children }) => {
         setUser(false);
         localStorage.removeItem("user");
         localStorage.removeItem("token");
+
+        toast.success("Logout successful");
     };
 
     return (

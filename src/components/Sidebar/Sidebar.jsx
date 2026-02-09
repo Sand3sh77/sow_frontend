@@ -3,16 +3,23 @@ import { getSidebarLinks } from './utils';
 import SidebarItem from './SidebarItem';
 import { AuthContext } from '../../context';
 import "./sidebar.css";
+import { useNavigate } from 'react-router';
 
 export default function Sidebar() {
     const [selectedMenu, setSelectedMenu] = useState('pricelist');
     const sidebarLinks = getSidebarLinks();
+
+    const navigate = useNavigate();
+
     const { logout } = useContext(AuthContext);
 
 
     const handleItemSelect = (item) => {
-        setSelectedMenu(item.id);
         if (item.id == "logout") logout();
+
+        setSelectedMenu(item.id);
+
+        navigate(item.path);
     }
 
     return (

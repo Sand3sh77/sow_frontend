@@ -3,7 +3,11 @@
 
     #dashboard-layout {
         display: flex;
-    }
 
-    #dashboard-layout-content {}
+        #dashboard-sidebar {}
+
+        #dashboard-layout-content {
+            padding: 1rem;
+        }
+    }
 }
