@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { TranslationContext } from "../../../context";
 
-export const getLinks = () => {
+export const useNavLinks = () => {
     const { translations } = useContext(TranslationContext);
 
     return (

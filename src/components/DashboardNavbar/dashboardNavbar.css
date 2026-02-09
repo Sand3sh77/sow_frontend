@@ -11,6 +11,10 @@
         align-items: center;
         justify-content: space-between;
 
+        #burger-icon {
+            display: none;
+        }
+
         #dashboard-navbar-user {
             display: flex;
             align-items: center;
@@ -39,5 +43,19 @@
                 }
             }
         }
+
+        @media (max-width: 1199px) {
+            #burger-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+
+            #dashboard-navbar-user {
+                display: none;
+            }
+        }
     }
+
 }

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { LanguageSelect } from '../LanguageSelect';
-import './dashboardNavbar.css';
 import { AuthContext } from '../../context';
+import { Menu } from 'lucide-react';
+import './dashboardNavbar.css';
 
 export default function DashboardNavbar() {
     const { user } = useContext(AuthContext);
@@ -9,6 +10,7 @@ export default function DashboardNavbar() {
     return (
         <nav id='dashboard-navbar-container'>
             <div id='dashboard-navbar-content'>
+                <div id="burger-icon"><Menu stroke='white' width={30} height={30}/></div>
                 <div id="dashboard-navbar-user">
                     <img
                         src={

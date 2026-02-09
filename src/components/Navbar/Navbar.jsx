@@ -1,11 +1,11 @@
 import React from 'react'
 import NavLinks from './NavLink'
-import { getLinks } from './utils';
+import { useNavLinks } from './hooks';
 import { LanguageSelect } from '../LanguageSelect';
 import "./navbar.css";
 
 export default function Navbar() {
-    const links = getLinks();
+    const links = useNavLinks();
 
     return (
         <nav id='nav-container'>

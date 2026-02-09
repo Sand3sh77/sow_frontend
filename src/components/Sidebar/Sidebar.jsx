@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { getSidebarLinks } from './utils';
 import SidebarItem from './SidebarItem';
 import { AuthContext } from '../../context';
 import "./sidebar.css";
 import { useNavigate } from 'react-router';
+import { useSidebarLinks } from './hooks';
 
 export default function Sidebar() {
     const [selectedMenu, setSelectedMenu] = useState('pricelist');
-    const sidebarLinks = getSidebarLinks();
+    const sidebarLinks = useSidebarLinks();
 
     const navigate = useNavigate();
 
