@@ -1,0 +1,118 @@
+.data-table-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-radius: 4px;
+
+    .data-table {
+        margin: 0 3rem;
+        min-width: 75vw;
+
+        thead {
+            th {
+                padding: 14px 16px;
+                text-align: left;
+                font-size: 13px;
+                font-weight: 600;
+                color: #2b2a2a;
+                cursor: pointer;
+                user-select: none;
+                white-space: nowrap;
+
+                &:hover {
+                    background-color: #f5f5f5;
+                }
+            }
+        }
+
+        tbody {
+            position: relative;
+        }
+
+        td {
+            padding: 0px 8px;
+            font-size: 13px;
+            border-radius: 1rem;
+            color: #333;
+            border: 1px solid #e0e0e0;
+            white-space: nowrap;
+            margin: 1rem !important;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.03);
+
+            &:last-child {
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .product {
+            max-width: 250px;
+        }
+
+        .in-price,
+        .price,
+        .in-stock {
+            text-align: right;
+        }
+
+        .unit {
+            min-width: 140px;
+        }
+
+        .description {
+            max-width: 320px;
+        }
+
+        .actions-col {
+            width: 50px;
+            text-align: center;
+        }
+
+        .more-actions {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .last-row {
+            position: absolute;
+            left: -1.5rem;
+            bottom: 2px;
+        }
+
+        @media (max-width: 1199px) {
+
+            .in-stock,
+            .inStock,
+            .in-price,
+            .inPrice,
+            .description {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .article-no,
+            .articleNo,
+            .in-stock,
+            .inStock,
+            .unit {
+                display: none;
+            }
+        }
+    }
+}

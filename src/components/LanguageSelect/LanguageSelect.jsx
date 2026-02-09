@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react'
-import { ConfigContext, TranslationContext } from '../../context'
+import React, { useContext, useState } from 'react';
+import { ConfigContext, TranslationContext } from '../../context';
+import './languageSelect.css';
 
 export default function Language() {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +18,8 @@ export default function Language() {
 
     return (
         <div id='nav-language-container'>
-            <div className='nav-item' onClick={() => setIsOpen(!isOpen)}>
-                <a className='nav-link'>{selectedLanguage.name}</a>
+            <div className='language-item' onClick={() => setIsOpen(!isOpen)}>
+                <a className='language-link'>{selectedLanguage.name}</a>
                 <img
                     src={selectedLanguage.icon}
                     alt={selectedLanguage.name + " Logo"}
@@ -31,11 +32,11 @@ export default function Language() {
                     {
                         configs.languages.map((lang, index) => (
                             <div
-                                className='nav-item language-option'
+                                className='language-item language-option'
                                 key={index}
                                 onClick={() => handleLanguageChange(lang.code)}
                             >
-                                <a className='nav-link'>{lang.name}</a>
+                                <a className='language-link-dropdown'>{lang.name}</a>
                                 <img
                                     src={lang.icon}
                                     alt={lang.name + " Logo"}

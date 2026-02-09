@@ -1,6 +1,32 @@
 #dashboard-layout-container {
-    min-height: 100vh;
-    background-image: url(https://storage.123fakturera.se/public/wallpapers/sverige43.jpg);
-    background-size: cover;
-    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#dashboard-layout-container>nav {
+    flex-shrink: 0;
+}
+
+#dashboard-layout {
+    display: flex;
+    gap: 8px;
+    height: calc(100vh - 64px);
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+#dashboard-sidebar {
+    flex-shrink: 0;
+}
+
+#dashboard-layout-content {
+    flex: 1;
+    padding: 1rem;
+    overflow: hidden;
+
+    @media (max-width: 575px) {
+        padding: 0;
+    }
 }
