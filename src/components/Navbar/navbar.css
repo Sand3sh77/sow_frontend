@@ -11,29 +11,90 @@
         justify-content: space-between;
         width: 75%;
         gap: 1rem;
-    }
 
-    #nav-links-container {
-        display: flex;
-        align-items: center;
-        gap: 3rem;
-
-        img{
-            border-radius: 4px;
+        #burger-icon-container {
+            display: none;
         }
 
-        .nav-item {
+        #nav-links-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            cursor: pointer;
+            gap: 3rem;
+            justify-items: center;
+
+            #nav-links-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+            }
+
+            img {
+                border-radius: 4px;
+            }
+
+            .nav-item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                cursor: pointer;
+            }
+
+            .nav-link {
+                text-decoration: none;
+                color: white;
+                font-weight: 600;
+            }
+
+            @media (max-width: 1199px) {
+                #nav-links-content {
+                    display: none;
+                }
+            }
+
         }
 
-        .nav-link {
-            text-decoration: none;
-            color: white;
-            font-weight: 600;
+        @media (max-width: 1199px) {
+
+            #burger-icon-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                position: relative;
+            }
+
+            #nav-image,
+            #nav-links-content {
+                display: none;
+            }
+
+            #burger-links {
+                position: absolute;
+                width: 20rem;
+                top: 3rem;
+                left: 0;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                z-index: 999;
+
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    cursor: pointer;
+                    padding: 1.5rem 2.5rem;
+                    text-decoration: none;
+                    color: rgb(53, 51, 51);
+                    font-weight: 600;
+
+                    &:hover {
+                        background-color: #8CC0FE;
+                    }
+                }
+            }
         }
     }
-
 }

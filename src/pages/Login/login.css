@@ -103,3 +103,21 @@
         }
     }
 }
+
+@media (max-width: 1199px) {
+    #login-form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 777px) {
+    #login-form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 516px) {
+    #login-form {
+        width: 95%;
+    }
+}

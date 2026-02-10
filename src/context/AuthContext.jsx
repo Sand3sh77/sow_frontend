@@ -22,7 +22,8 @@ export const AuthProvider = ({ children }) => {
             }
         } catch (error) {
             console.log(error);
-            toast.error(error.response.data.message);
+            if (error.response.data.error) toast.error(error.response.data.error);
+            else toast.error(error.response.data.message);
         }
     };
 
