@@ -1,7 +1,6 @@
 .data-table-container {
     flex: 1;
-    overflow-y: auto;
-    overflow-x: auto;
+    overflow: auto;
     border-radius: 4px;
 
     .data-table {
