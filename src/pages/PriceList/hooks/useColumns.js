@@ -5,12 +5,12 @@ export const useColumns = () => {
     const { translations } = useContext(TranslationContext);
 
     return [
-        { key: 'articleNo', label: translations.article_no },
-        { key: 'product', label: translations.product_service },
-        { key: 'inPrice', label: translations.in_price },
+        { key: 'article_no', label: translations.article_no },
+        { key: 'name', label: translations.product_service },
+        { key: 'in_price', label: translations.in_price },
         { key: 'price', label: translations.price },
         { key: 'unit', label: translations.unit },
-        { key: 'inStock', label: translations.in_stock },
+        { key: 'in_stock', label: translations.in_stock },
         { key: 'description', label: translations.description }
     ];
 };
